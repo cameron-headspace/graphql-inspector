@@ -190,7 +190,7 @@ export async function run() {
       )
     : false;
 
-  core.info(`payload: ${github.context.payload?.pull_request.labels}`);
+  console.log({pr: JSON.stringify(github.context.payload.pull_request)})
 
   // Force Success when failOnBreaking is disabled
   if (
