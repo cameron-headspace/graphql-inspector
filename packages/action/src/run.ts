@@ -190,6 +190,8 @@ export async function run() {
       )
     : false;
 
+  core.info(`payload: ${github.context.payload?.pull_request.labels}`);
+
   // Force Success when failOnBreaking is disabled
   if (
     (failOnBreaking === false || hasApprovedBreakingChangeLabel) &&
